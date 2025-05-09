@@ -1,25 +1,26 @@
 <script setup>
 
+    import { computed ,ref} from 'vue'
     import { useAddCart } from './stores/cart'
     const cart = useAddCart()
 
-    // console.log(cart.cartArray);
 
-    const addCart = (prod) =>{
-        cart.addCartArray(prod)
-        console.log(prod);
-        
-    }
-
-
-
-    
     // 產品資料
     const products = [
      { id: 1, name: 'Apple', price: 30 },
      { id: 2, name: 'Banana', price: 20 },
      { id: 3, name: 'Orange', price: 25 },
     ]
+
+
+    // 點擊 "加入購物車" 後將該產品資料引用並呼叫 pinia 的 addCartArry 購物車功能
+    const addCart = (prod) =>{
+        cart.addCartArray(prod)
+    }
+
+
+
+    
 
 
 </script>
@@ -52,20 +53,24 @@
                     <div class="quality">操作</div>
                     
                 </div>
-                <div class="item">
+                <div class="NoneProd" v-if="cart.cartArray.length==0">
+                    您目前購物車是空的!
+                
+                </div>
+                <div class="item" v-for="item in cart.cartArray">
 
                     <div class="prodName">
-                        香蕉
+                        {{item.name}}
                     </div>
                     <div class="prodPrice">
-                        240
+                        {{item.price}}
                     </div>
                     <div class="quality">
-                            <button>+</button>
-                            <div>1</div> 
-                            <button>-</button>   
+                            <button @click="cart.addQuality(item.id)">+</button>
+                            <div>{{item.quality}}</div> 
+                            <button @click="cart.reduceQuality(item.quality)">-</button>   
                     </div>
-                    <div class="total">240</div>
+                    <div class="total">{{item.totalprice}}</div>
 
                     <div class="quality">刪除</div>
                 </div>
@@ -119,6 +124,10 @@
     align-items: center;
     justify-content: center;
     width: 200px;
+    gap: 10px;
+}
+.NoneProd{
+    padding: 50px 0px;
 }
 .item{
     display: flex;
