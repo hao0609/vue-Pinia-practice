@@ -20,6 +20,7 @@
 
 
 
+
     
 
 
@@ -68,14 +69,14 @@
                     <div class="quality">
                             <button @click="cart.addQuality(item.id)">+</button>
                             <div>{{item.quality}}</div> 
-                            <button @click="cart.reduceQuality(item.quality)">-</button>   
+                            <button @click="cart.reduceQuality(item.id)">-</button>   
                     </div>
                     <div class="total">{{item.totalprice}}</div>
 
-                    <div class="quality">刪除</div>
+                    <div class="quality"><button @click="cart.deleteCartProd(item.id)">刪除</button></div>
                 </div>
                 <div class="totalPrice_box">
-                    總金額：<span id="totalPrice">240</span>
+                    總金額：<span id="totalPrice">{{cart.totalPrice}}</span>
                 </div>
 
             </div>

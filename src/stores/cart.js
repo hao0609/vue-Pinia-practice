@@ -9,7 +9,13 @@ export const useAddCart = defineStore('cart',{
         ]
     }),
     getters:{   
-
+        totalPrice:(state)=>{
+            let result = 0
+            state.cartArray.forEach(item=>{
+                result+=item.totalprice
+            })
+            return result
+        }
     },  
     actions:{
         addCartArray(prod){
@@ -33,25 +39,52 @@ export const useAddCart = defineStore('cart',{
             }
         },
         addQuality(prodId){
-            console.log(prodId);
-            
+
+            // 利用 forEach 尋找 cartArray 裡 id 相符的資料，並添加數量
             this.cartArray.forEach((item)=>{
-                console.log(item.id);
                 
                 if (item.id == prodId) {
                     item.quality++
-                }else{
-                    // 
-                    
                 }
             })
             
-      },
-        reduceQuality(quality){
-            // if (quality>0) {
-            //   return  quality.value--
-            // }
+        },
+        reduceQuality(prodId){
+            // 利用 forEach 尋找 cartArray 裡 id 相符的資料，並減少數量
+            this.cartArray.forEach((item)=>{
+                
+                if (item.id == prodId) {
+                    if (item.quality>0) {
+                        item.quality--
+                    }
+                    // 若數量減到為0時，讓用戶選擇是否要刪除該產品
+                    if (item.quality==0) {
+                        setTimeout(()=>{
+                            this.deleteCartProd(prodId,"qualityZero")
+                        }
+                        ,500)
+                    }
+                }
+            })
+        },
+        deleteCartProd(prodId,type){
+            const checkDelete = confirm('是否要刪除該筆產品?')
+            if (checkDelete) {
+                 // 若是，讓 cartArray 利用 filter 重新篩選該 ID 產品的資料，並重新賦值
+                 this.cartArray =  this.cartArray.filter(item =>item.id !== prodId)    
+             }else{
+                 // 若否，則刪除類型是 "數量為0時"，讓該產品數量回復為1
+                if (type === 'qualityZero') {
+                    this.cartArray.forEach((item)=>{
+                        if (item.id == prodId) {
+                            item.quality=1
+                        }
+                    })
+                }
+                 
+             }
         }
+
 
     }
 })
