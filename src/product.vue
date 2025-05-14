@@ -27,7 +27,7 @@
 </script>
 
 <template>
-
+    <div class="bg-black text-white"> 
         <div class="productBox">
             <div v-for="product in products" class="product">
                     <div>{{ product.id }}</div>
@@ -82,6 +82,7 @@
             </div>
             
         </div>
+    </div>
 </template>
 
 
