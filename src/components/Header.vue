@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full py-14 px-4">
+    <header class="w-full pt-14 pb-6 px-4">
         <div class="header_box flex justify-between gap-10  max-w-7xl mx-auto">
             <div class="leftContent flex flex-row">
                 <div class="handBurger md:hidden mr-4">
