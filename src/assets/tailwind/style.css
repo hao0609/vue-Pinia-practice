@@ -18,4 +18,5 @@
 @theme {
   --font-integralcf:'integralcf', sans-serif;
   --breakpoint-rwd-950: 950px;
+  --color-productCardBg: #F0EEED;
 }

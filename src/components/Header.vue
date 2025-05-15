@@ -1,6 +1,6 @@
 <template>
     <header class="w-full pt-14 pb-6 px-4">
-        <div class="header_box flex justify-between gap-10  max-w-7xl mx-auto">
+        <div class="header_box flex justify-between  max-w-7xl mx-auto">
             <div class="leftContent flex flex-row">
                 <div class="handBurger md:hidden mr-4">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
