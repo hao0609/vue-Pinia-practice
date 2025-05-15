@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+
+@font-face {
+  font-family: 'integralcf';
+  src: url('../font/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'integralcf';
+  src: url('../font/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@theme {
+  --font-integralcf:'integralcf', sans-serif;
+  --breakpoint-rwd-950: 950px;
+}

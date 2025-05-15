@@ -2,6 +2,7 @@
 import product from './product.vue'
 import Header from './components/Header.vue';
 import Banner from './components/Banner.vue'
+import LogoBanner from './components/LogoBanner.vue'
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import Banner from './components/Banner.vue'
   </div> -->
     <Header/>
     <Banner/>
+    <LogoBanner/>
+
 
   
 
