@@ -5,12 +5,12 @@
     <div class="BannerBox w-full  bg-[#F2F0F1] px-4">
         <div class="max-w-7xl mx-auto flex flex-row justify-between flex-wrap">
             <div class="leftInfo w-full rwd-950:w-[50%] flex flex-col gap-[37px] mt-[min(10vh,5rem)]">
-                <div class="BigTitle text-black text-[min(10vw,45px)] font-bold font-integralcf">
+                <div class="BigTitle">
                     FIND CLOTHES <br>
                     THAT MATCHES <br>
                     YOUR STYLE
                 </div>
-                <div class="SmallTitle text-gray-500 text-base ">
+                <div class="text-gray-500 text-base">
                     Browse through our diverse range of meticulously crafted garments, <br>
                     designed to bring out your individuality and cater to your sense of style.
                 </div>

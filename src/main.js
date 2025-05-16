@@ -5,6 +5,9 @@ import App from './App.vue'
 // 引入 tailwind
 import './assets/tailwind/style.css'
 
+// 引入 splidejs 套件
+import '@splidejs/vue-splide/css'
+
 
 // 引入 Pinia
 import { createPinia } from 'pinia'

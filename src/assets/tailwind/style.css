@@ -15,8 +15,38 @@
   font-style: bold;
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../font/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../font/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
 @theme {
   --font-integralcf:'integralcf', sans-serif;
+  --font-Satoshi:'Satoshi', sans-serif;
   --breakpoint-rwd-950: 950px;
   --color-productCardBg: #F0EEED;
+}
+
+.btn {
+  @apply bg-black text-white rounded-[64px] px-[54px] py-[16px] max-md:w-full 
+}
+.BigTitle{
+  @apply text-black text-[min(10vw,45px)] leading-[64px] font-bold font-integralcf
+}
+
+.SmallTitle{
+  @apply font-integralcf text-3xl font-bold text-center sm:text-5xl
+}
+
+.py-50 {
+  @apply py-[50px]
 }

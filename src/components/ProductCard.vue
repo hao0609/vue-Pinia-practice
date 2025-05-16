@@ -1,10 +1,10 @@
 <template>
-    <div class="ProductCard_box flex flex-col">
-        <div class="photo w-[180px] h-[180px] rounded-[13px] bg-productCardBg">
-            <img src="" alt="">
+    <div class="ProductCard_box flex flex-col w-[180px] gap-2 sm:w-[295px] sm:gap-3 my-1.5">
+        <div class="photo rounded-[13px] bg-productCardBg">
+            <img class="w-full" src="../assets/img/T_Shirt.png" alt="">
         </div>
-        <div class="productName">T-SHIRT WITH TAPE DETAILS</div>
-        <div class="productPrice">$120</div>
+        <div class="productName font-Satoshi font-bold text-base">T-shirt with Tape Details</div>
+        <div class="productPrice font-Satoshi font-bold text-xl">$120</div>
         
     </div>
 </template>

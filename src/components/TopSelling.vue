@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div class="NewArrival_box max-w-7xl mx-auto px-4 my-10">
-        <div class="SmallTitle py-50">NEW ARRIVALS</div> 
+    <div class="NewArrival_box max-w-7xl mx-auto px-4">
+        <div class="SmallTitle py-50">TOP SELLING</div> 
         <div class="product flex flex-wrap justify-evenly">
             <ProductCard/>
             <ProductCard/>
