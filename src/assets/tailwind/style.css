@@ -37,7 +37,7 @@
 }
 
 .btn {
-  @apply bg-black text-white rounded-[64px] px-[54px] py-[16px] max-md:w-full 
+  @apply bg-black text-white rounded-[64px] px-[54px] py-[16px] max-md:w-full hover:bg-white hover:text-black hover:border-1 cursor-pointer
 }
 .BigTitle{
   @apply text-black text-[min(10vw,45px)] leading-[64px] font-bold font-integralcf

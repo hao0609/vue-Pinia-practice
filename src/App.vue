@@ -7,6 +7,7 @@ import NewArrival from './components/NewArrival.vue'
 import TopSelling from './components/TopSelling.vue'
 import Comments from './components/Comments.vue'
 import Comments_Slider from './components/Comments_Slider.vue'
+import Footer from './components/Footer.vue'
 
 </script>
 
@@ -20,7 +21,7 @@ import Comments_Slider from './components/Comments_Slider.vue'
     <TopSelling/>
     <!-- <Comments/> -->
     <Comments_Slider/>
-  
+    <Footer/>
 
 </template>
 

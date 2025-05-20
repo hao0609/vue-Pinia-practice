@@ -15,7 +15,7 @@
                     designed to bring out your individuality and cater to your sense of style.
                 </div>
                 <div class="ShopButton">
-                    <button class="bg-black text-white rounded-[64px] px-[54px] py-[16px] max-md:w-full ">
+                    <button class="btn">
                         Shop Now
                     </button>
                 </div>
